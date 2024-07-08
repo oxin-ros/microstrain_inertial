@@ -1,5 +1,14 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="dummy_inertia">
+    <inertial>
+      <mass value="0.001" />
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0"
+               iyy="0.0001" iyz="0.0"
+               izz="0.0001" />
+    </inertial>
+  </xacro:macro>
+
   <xacro:macro name="cv7" params="name parent *origin">
     <material name="cv7_material">
       <color rgba="${80/255} ${81/255} ${85/255} 1" />
@@ -13,9 +22,11 @@
         </geometry>
         <material name="cv7_material"/>
       </visual>
+      <xacro:dummy_inertia/>
     </link>
 
     <link name="${name}">
+      <xacro:dummy_inertia/>
     </link>
 
     <!-- This joint handles the center of the CV7, but measurements will not be produced WRT to this, it is just easier to place on robots -->
