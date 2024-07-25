@@ -97,13 +97,17 @@ find_package(catkin REQUIRED COMPONENTS
   microstrain_inertial_msgs
 )
 
-# Find some less ROS-y packages
-list(APPEND CMAKE_MODULE_PATH "/usr/share/cmake/geographiclib/")
-find_package(Eigen3 REQUIRED)
-find_package(GeographicLib REQUIRED)
+# GeographicLib
+include(FetchContent)
+FetchContent_Declare(
+  GeographicLib
+  GIT_REPOSITORY https://github.com/geographiclib/geographiclib.git
+  GIT_TAG v2.3
+)
+FetchContent_MakeAvailable(GeographicLib)
 
-# We want to use the static library for libgeographic, but it doesn't seem to find it for us, so substitute it here
-string(REGEX REPLACE "[.]so[^\\/\\s]*$" ".a" GeographicLib_LIBRARIES ${GeographicLib_LIBRARIES})
+# Find some less ROS-y packages
+find_package(Eigen3 REQUIRED)
 
 ###################################
 ## catkin specific configuration ##
@@ -143,7 +147,6 @@ include_directories(
   ${COMMON_DIR}/include
   ${catkin_INCLUDE_DIRS}
   ${EIGEN3_INCLUDE_DIRS}
-  ${GeographicLib_INCLUDE_DIRS}
 )
 
 set(LIB_SRC_FILES
@@ -224,7 +227,7 @@ target_link_libraries(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME}_node
   ${PROJECT_NAME}
   ${catkin_LIBRARIES}
-  ${GeographicLib_LIBRARIES}
+  GeographicLib
 )
 
 #############
