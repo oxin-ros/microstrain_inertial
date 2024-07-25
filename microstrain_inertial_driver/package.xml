@@ -26,12 +26,12 @@
   <depend>nmea_msgs</depend>
   <depend>rtcm_msgs</depend>
   <depend>tf2_geometry_msgs</depend>
-  
+
   <depend>microstrain_inertial_msgs</depend>
 
   <!-- Static or header only library deps -->
   <build_depend>eigen</build_depend>
-  <build_depend>geographiclib</build_depend>
+  <!-- <build_depend>geographiclib</build_depend> -->
 
   <build_depend>message_generation</build_depend>
   <build_depend>roslint</build_depend>
