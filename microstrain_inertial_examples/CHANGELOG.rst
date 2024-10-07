@@ -2,8 +2,8 @@
 Changelog for package microstrain_inertial_examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.4.0 (2024-10-07)
+------------------
 * ROS Adds example of providing NMEA over CV7-INS aux port (`#351 <https://github.com/LORD-MicroStrain/microstrain_inertial/issues/351>`_)
   * Adds ROS CV7-INS NMEA aux port example
   * Adds example files to README

@@ -2,8 +2,8 @@
 Changelog for package microstrain_inertial_driver
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.4.0 (2024-10-07)
+------------------
 * ROS submodule update 10/07/2024 (`#356 <https://github.com/LORD-MicroStrain/microstrain_inertial/issues/356>`_)
 * ROS submodule update 08/23/2024 (`#349 <https://github.com/LORD-MicroStrain/microstrain_inertial/issues/349>`_)
 * Contributors: Rob
