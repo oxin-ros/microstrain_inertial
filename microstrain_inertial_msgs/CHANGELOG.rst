@@ -2,8 +2,8 @@
 Changelog for package microstrain_inertial_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.5.0 (2024-11-07)
+------------------
 * ROS submodule update 11 07 2024 (`#363 <https://github.com/LORD-MicroStrain/microstrain_inertial/issues/363>`_)
 * Contributors: Rob
 
